@@ -1,7 +1,7 @@
 ARG DOCKER_VERSION=latest
 FROM docker:${DOCKER_VERSION}
 
-RUN apk add --no-cache py-pip python-dev libffi-dev openssl-dev gcc libc-dev make bash
+RUN apk add --no-cache py-pip python-dev libffi-dev openssl-dev openssh-client gcc libc-dev make bash
 RUN pip install docker-compose
 
 LABEL author="Daniel Charvat <dan@elision.design>"
